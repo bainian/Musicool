@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+apply plugin: "kotlin-android"
+apply plugin: "kotlin-android-extensions"
 
 android {
     compileSdkVersion 24
@@ -12,10 +14,16 @@ android {
         versionName "1.0"
     }
     buildTypes {
+        debug {
+
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
     }
 }
 
@@ -24,4 +32,13 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:24.0.0'
     compile 'com.android.support:design:24.0.0'
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+    // DSL
+    compile "org.jetbrains.anko:anko-sdk15:0.8.2" // sdk19, sdk21, sdk23 are also available
+    compile "org.jetbrains.anko:anko-support-v4:0.8.2" // In case you need support.v4 bindings
+
+}
+repositories {
+    mavenCentral()
 }
