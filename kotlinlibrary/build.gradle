@@ -1,9 +1,6 @@
 apply plugin: 'com.android.library'
-<<<<<<< HEAD
-=======
 apply plugin: "kotlin-android"
 apply plugin: "kotlin-android-extensions"
->>>>>>> f1ad690a50e3e54c006cb098492a9a3546d4321b
 
 android {
     compileSdkVersion 24
@@ -16,31 +13,23 @@ android {
         versionName "1.0"
     }
     buildTypes {
-<<<<<<< HEAD
-=======
         debug {
 
         }
->>>>>>> f1ad690a50e3e54c006cb098492a9a3546d4321b
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-<<<<<<< HEAD
-=======
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
->>>>>>> f1ad690a50e3e54c006cb098492a9a3546d4321b
 }
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:24.0.0'
-<<<<<<< HEAD
-=======
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
     // DSL
@@ -49,5 +38,4 @@ dependencies {
 }
 repositories {
     mavenCentral()
->>>>>>> f1ad690a50e3e54c006cb098492a9a3546d4321b
 }
